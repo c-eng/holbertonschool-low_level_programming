@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints sum of fibonacci numbers not exceeding 4000000
+ * main - prints sum of even fibonacci numbers not exceeding 4000000
  *
  * Return: 0
  */
@@ -12,7 +12,8 @@ int main(void)
 
 	while (current < 4000000)
 	{
-		sum += current;
+		if ((current % 2) == 0)
+			sum += current;
 		current = prev1 + prev2;
 		prev2 = prev1;
 		prev1 = current;
