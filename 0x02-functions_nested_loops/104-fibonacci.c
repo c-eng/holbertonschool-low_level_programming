@@ -11,7 +11,7 @@ int main(void)
 	long p2a = 0, p2b = 0, p2c = 0, p1a = 1, p1b = 0, p1c = 0;
 	long currenta = 0, currentb = 0, currentc = 0, counter;
 
-	for (counter = 0 ; counter < 100 ; counter++)
+	for (counter = 0 ; counter < 98 ; counter++)
 	{
 		currenta = (p1a + p2a) % 10000000;
 		if ((p1a + p2a) / 10000000 > 0)
@@ -22,7 +22,7 @@ int main(void)
 			currentc = ((p1c + p2c) % 10000000) + 1;
 		else
 			currentc = (p1c + p2c);
-		if (counter < 99)
+		if (counter < 97)
 		{
 			if (currentc > 0)
 				printf("%ld", currentc);
