@@ -1,22 +1,34 @@
 #include "holberton.h"
 
 /**
- * _abs - returns the abs of integer n
- * @n: the integer to be absd
+ * print_neg - prints negative integer
+ * @n: the number to be printed
  *
- * Return: the abs of n
+ * Return: void
  */
 
-int _abs(int n)
+void print_neg(int n)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	else
-	{
-		return (-n);
-	}
+	_putchar('-');
+	if (n / 1000000000 < 0)
+		_putchar(((n / -1000000000) % 10) + '0');
+	if (n / 100000000 < 0)
+		_putchar(((n / -100000000) % 10) + '0');
+	if (n / 10000000 < 0)
+		_putchar(((n / -10000000) % 10) + '0');
+	if (n / 1000000 < 0)
+		_putchar(((n / -1000000) % 10) + '0');
+	if (n / 100000 < 0)
+		_putchar(((n / -100000) % 10) + '0');
+	if (n / 10000 < 0)
+		_putchar(((n / -10000) % 10) + '0');
+	if (n / 1000 < 0)
+		_putchar(((n / -1000) % 10) + '0');
+	if (n / 100 < 0)
+		_putchar(((n / -100) % 10) + '0');
+	if (n / 10 < 0)
+		_putchar(((n / -10) % 10) + '0');
+	_putchar('0' - (n % 10));
 }
 
 /**
@@ -29,24 +41,27 @@ int _abs(int n)
 void print_number(int n)
 {
 	if (n < 0)
-		_putchar('-');
-	if (_abs(n) / 1000000000 > 0)
-		_putchar(((_abs(n) / 1000000000) % 10) + '0');
-	if (_abs(n) / 100000000 > 0)
-		_putchar(((_abs(n) / 100000000) % 10) + '0');
-	if (_abs(n) / 10000000 > 0)
-		_putchar(((_abs(n) / 10000000) % 10) + '0');
-	if (_abs(n) / 1000000 > 0)
-		_putchar(((_abs(n) / 1000000) % 10) + '0');
-	if (_abs(n) / 100000 > 0)
-		_putchar(((_abs(n) / 100000) % 10) + '0');
-	if (_abs(n) / 10000 > 0)
-		_putchar(((_abs(n) / 10000) % 10) + '0');
-	if (_abs(n) / 1000 > 0)
-		_putchar(((_abs(n) / 1000) % 10) + '0');
-	if (_abs(n) / 100 > 0)
-		_putchar(((_abs(n) / 100) % 10) + '0');
-	if (_abs(n) / 10 > 0)
-		_putchar(((_abs(n) / 10) % 10) + '0');
-	_putchar((_abs(n) % 10) + '0');
+		print_neg(n);
+	else
+	{
+		if (n / 1000000000 > 0)
+			_putchar(((n / 1000000000) % 10) + '0');
+		if (n / 100000000 > 0)
+			_putchar(((n / 100000000) % 10) + '0');
+		if (n / 10000000 > 0)
+			_putchar(((n / 10000000) % 10) + '0');
+		if (n / 1000000 > 0)
+			_putchar(((n / 1000000) % 10) + '0');
+		if (n / 100000 > 0)
+			_putchar(((n / 100000) % 10) + '0');
+		if (n / 10000 > 0)
+			_putchar(((n / 10000) % 10) + '0');
+		if (n / 1000 > 0)
+			_putchar(((n / 1000) % 10) + '0');
+		if (n / 100 > 0)
+			_putchar(((n / 100) % 10) + '0');
+		if (n / 10 > 0)
+			_putchar(((n / 10) % 10) + '0');
+		_putchar((n % 10) + '0');
+	}
 }
