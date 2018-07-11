@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _strstr - Finds needle in haystack
  * @haystack: string to search
@@ -12,6 +10,8 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i, j, substring = 0, index_hold = 0;
 
+	if (needle[0] == '\0')
+		return (haystack);
 	for (i = 0 ; haystack[i] != '\0' ; i++)
 	{
 		for (j = 0 ; needle[j] != '\0' ; j++)
@@ -28,5 +28,5 @@ char *_strstr(char *haystack, char *needle)
 		if (needle[j] == '\0' && substring == 1)
 			return (haystack + index_hold);
 	}
-	return (haystack + index_hold);
+	return ('\0');
 }
