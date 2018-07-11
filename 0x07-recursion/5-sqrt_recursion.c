@@ -8,7 +8,9 @@
 
 int _sqart(int n, int s)
 {
-	if (n < 1)
+	if (s == 0)
+		return(n);
+	else if (n < 1)
 		return (-1);
 	else if ((s / n == n) && (s % n == 0))
 		return (n);
