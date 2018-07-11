@@ -8,9 +8,7 @@
 
 int _sqart(int n, int s)
 {
-	if (s == 0)
-		return(n);
-	else if (n < 1)
+	if (n < 1)
 		return (-1);
 	else if ((s / n == n) && (s % n == 0))
 		return (n);
@@ -27,5 +25,11 @@ int _sqart(int n, int s)
 
 int _sqrt_recursion(int n)
 {
+	if (n > 1000000000)
+		return(_sqart(n / 30000, n));
+	if (n > 1000000)
+		return(_sqart(n / 1000, n));
+	if (n > 100)
+		return(_sqart(n / 10, n));
 	return (_sqart(n, n));
 }
