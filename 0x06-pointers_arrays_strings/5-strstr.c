@@ -10,7 +10,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, substring = 0, index_hold;
+	int i, j, substring = 0, index_hold = 0;
 
 	for (i = 0 ; haystack[i] != '\0' ; i++)
 	{
@@ -28,5 +28,5 @@ char *_strstr(char *haystack, char *needle)
 		if (needle[j] == '\0' && substring == 1)
 			return (haystack + index_hold);
 	}
-	return ('\0');
+	return (haystack + index_hold);
 }
