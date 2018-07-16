@@ -1,3 +1,6 @@
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
+
 int _putchar (char c);
 
 void print_alphabet(void);
@@ -121,3 +124,5 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 
 int wildcmp(char *s1, char *s2);
+
+#endif 
