@@ -19,9 +19,9 @@ char *_strdup(char *str)
 	strength = malloc(sizeof(char) * len);
 	if (strength)
 	{
-		for (i = 0 ; i < len ; i++)
+		for (i = 0 ; i <= len ; i++)
 			strength[i] = str[i];
 		return (strength);
 	}
-	return ("\0");
+	return ('\0');
 }
