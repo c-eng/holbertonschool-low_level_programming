@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * argstostr - concatanates args with \n seperators
@@ -22,7 +21,6 @@ char *argstostr(int ac, char **av)
 				;
 			len += (a_i + 1);
 		}
-		printf("allocated %d bytes", len);
 		maomao = malloc(sizeof(char) * len);
 		if (maomao)
 		{
@@ -35,7 +33,6 @@ char *argstostr(int ac, char **av)
 				maomao[a_i + cur_len] = '\n';
 				cur_len += (a_i + 1);
 			}
-			printf(" and used %d bytes\n", cur_len);
 			return (maomao);
 		}
 	}
