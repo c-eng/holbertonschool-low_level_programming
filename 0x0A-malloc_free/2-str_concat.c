@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * str_concat - cats s1 and s2 in new memory
@@ -19,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 		;
 	if (len2 + len == 0)
 		return ('\0');
-	mao = malloc(sizeof(char) * (len + len2));
+	mao = malloc(sizeof(char) * (len + len2 + 1));
 	if (mao)
 	{
 		if (len != 0)
