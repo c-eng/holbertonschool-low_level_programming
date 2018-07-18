@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strdup - dups string str
@@ -9,18 +10,22 @@
 
 char *_strdup(char *str)
 {
-	unsigned int len, i;
+	int i, j;
 	char *strength;
 
-	for (len = 0 ; str[len] != '\0' ; len++)
-		;
-	if (len == 0)
+	if (str == '\0')
 		return ('\0');
-	strength = malloc(sizeof(char) * len);
+	for (i = 0 ; str[i] != '\0' ; i++)
+		;
+	if (i == 0)
+		return ('\0');
+	strength = malloc(sizeof(char) * (i + 1));
 	if (strength)
 	{
-		for (i = 0 ; i <= len ; i++)
-			strength[i] = str[i];
+		for (j = 0 ; j <= i ; j++)
+		{
+			strength[j] = str[j];
+		}
 		return (strength);
 	}
 	return ('\0');
