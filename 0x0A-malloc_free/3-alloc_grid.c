@@ -36,7 +36,7 @@ int **alloc_grid(int width, int height)
 
 	if (width > 0 && height > 0)
 	{
-		gridman = malloc(sizeof(int*) * height);
+		gridman = malloc(sizeof(int *) * height);
 		if (gridman)
 		{
 			for (i = 0 ; i < height ; i++)
@@ -55,7 +55,7 @@ int **alloc_grid(int width, int height)
 					return ('\0');
 				}
 			}
-			return(gridman);
+			return (gridman);
 		}
 	}
 	return ('\0');
