@@ -10,7 +10,7 @@
 
 int *array_range(int min, int max)
 {
-	long i, end;
+	int i, end;
 	int *areigh;
 
 	if (max >= min)
@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 		areigh = malloc(sizeof(int) * (max - min + 1));
 		if (areigh)
 		{
-			end = (long)max - (long)min + (long)1;
+			end = max - min + 1;
 			for (i = 0 ; i <= end ; i++)
 			{
 				areigh[i] = min;
