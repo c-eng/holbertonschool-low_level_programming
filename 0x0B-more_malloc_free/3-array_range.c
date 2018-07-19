@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 		areigh = malloc(sizeof(int) * (max - min + 1));
 		if (areigh)
 		{
-			end = max - min + 1;
+			end = max - min;
 			for (i = 0 ; i <= end ; i++)
 			{
 				areigh[i] = min;
