@@ -39,7 +39,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		areigh = malloc(nmemb * size);
 		if (areigh)
 		{
-			memeset(areigh, '\0', nmemb);
+			memeset(areigh, '\0', nmemb * size);
 			return (areigh);
 		}
 	}
