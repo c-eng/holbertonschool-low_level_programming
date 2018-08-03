@@ -9,7 +9,7 @@
  * Return: length of s
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int count = 0;
 
@@ -39,7 +39,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	new->next = *head;
 	new->str = strdup(str);
-	new->len = _strlen(new->str);
+	new->len = _strlen(str);
 	*head = new;
 	return (new);
 }
