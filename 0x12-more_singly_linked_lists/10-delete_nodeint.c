@@ -16,13 +16,13 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (head && *head)
 	{
 		read = *head;
-                if (index == 0)
-                {
-                        read = read->next;
-                        free(*head);
-                        *head = read;
+		if (index == 0)
+		{
+			read = read->next;
+			free(*head);
+			*head = read;
 			return (1);
-                }
+		}
 		while (read && count < (index - 1))
 		{
 			read = read->next;
