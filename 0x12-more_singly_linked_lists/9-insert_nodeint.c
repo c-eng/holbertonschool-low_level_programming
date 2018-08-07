@@ -19,10 +19,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		read = *head;
 		while (read && count < (idx - 1))
 		{
-			read = read->next;
 			count++;
 			if (!(read->next))
 				break;
+			read = read->next;
 		}
 		neu = malloc(sizeof(listint_t));
 		if (neu)
