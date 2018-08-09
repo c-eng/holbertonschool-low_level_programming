@@ -10,7 +10,7 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int int_i = index / 32, bit_i = index % 32;
+	int int_i = index / 64, bit_i = index % 64;
 	unsigned int set = 1;
 
 	if (!n)
