@@ -11,9 +11,14 @@ void print_binary(unsigned long int n)
 {
 	int shift = 1;
 
-	while (n >> shift)
+	while (n >> shift && shift <= 64)
+	{
 		shift++;
-	shift--;
+	}
+	if (shift > 0)
+	{
+		shift--;
+	}
 	while (shift >= 0)
 	{
 		if ((n >> shift) & 1)
