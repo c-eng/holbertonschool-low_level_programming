@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int shift = 1, flips = 0;
 	unsigned long int conpa, compa;
 
-	while (n >> shift || m >> shift)
+	while ((n >> shift || m >> shift) && shift < 64)
 		shift++;
 	shift--;
 	while (shift >= 0)
