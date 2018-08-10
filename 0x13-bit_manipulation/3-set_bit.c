@@ -13,7 +13,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	int int_i = index / 64, bit_i = index % 64;
 	unsigned int set = 1;
 
-	if (!n)
+	if (!n || int_i)
 		return (-1);
 	set = set << bit_i;
 	n[int_i] = n[int_i] | set;
