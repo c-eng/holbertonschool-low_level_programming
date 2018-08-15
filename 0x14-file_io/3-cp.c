@@ -5,7 +5,7 @@
  * @argc: number of args
  * @argv: array of string args
  *
- * Return: 0 or something else
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -30,18 +30,21 @@ int main(int argc, char *argv[])
 	if (fyle2 == -1)
 	{
 		free(buff);
-		close(fyle4);
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 	do {
 		reed = read(fyle4, buff, 1024);
 		wry = write(fyle2, buff, reed);
-		if (wry != reed)
+		if (wry == -1)
 		{
 			free(buff);
-			close(fyle4);
-			close(fyle2);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			exit(99);
+		}
+		else if (wry != reed)
+		{
+			free(buff);
 			dprintf(STDERR_FILENO, "Something Happened\n");
 			exit(42);
 		}
