@@ -46,20 +46,17 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	do {
-		reed = read(fyle4, buff, 1024);
-		wry = write(fyle2, buff, reed);
-		if (wry == -1)
+		if (reed)
 		{
-			free(buff);
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			wry = write(fyle2, buff, reed);
+			if (wry == -1)
+			{
+				free(buff);
+				dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			exit(99);
+			}
 		}
-		else if (wry != reed)
-		{
-			free(buff);
-			dprintf(STDERR_FILENO, "Something Happened\n");
-			exit(42);
-		}
+		reed = read(fyle4, buff, 1024);
 	} while (reed);
 	free(buff);
 	c4 = close(fyle4);
