@@ -13,6 +13,18 @@ int main(int argc, char *argv[])
 	int fyle4, fyle2, reed = 0, wry, c4, c2;
 	char *buff = malloc(sizeof(char) * 1024);
 
+	if (!argv[1])
+	{
+		free(buff);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	if (!arg[2])
+	{
+		free(buff);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+		exit(99);
+	}
 	if (argc != 3)
 	{
 		free(buff);
