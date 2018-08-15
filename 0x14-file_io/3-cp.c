@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define BUFFSIZE 1024
 
 /**
  * main - copies file contents to another file
@@ -11,37 +12,26 @@
 int main(int argc, char *argv[])
 {
 	int fyle4, fyle2, reed = 0, wry, c4, c2;
-	char *buff = malloc(sizeof(char) * 1024);
+	char buff[BUFFSIZE];
 
-	if (!argv[1])
-	{
-		free(buff);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	if (!argv[2])
-	{
-		free(buff);
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
-		exit(99);
-	}
 	if (argc != 3)
 	{
-		free(buff);
 		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", argv[1], argv[2]);
 		exit(97);
 	}
+
 	fyle4 = open(argv[1], O_RDONLY);
+
 	if (fyle4 == -1)
 	{
-		free(buff);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+
 	fyle2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+
 	if (fyle2 == -1)
 	{
-		free(buff);
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
@@ -49,23 +39,21 @@ int main(int argc, char *argv[])
 		if (reed)
 		{
 			wry = write(fyle2, buff, reed);
-			if (wry == -1)
+			if (wry != reed)
 			{
-				free(buff);
 				dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
-			exit(99);
+				exit(99);
 			}
 		}
-		reed = read(fyle4, buff, 1024);
+		reed = read(fyle4, buff, BUFFSIZE);
 	} while (reed);
-	free(buff);
 	c4 = close(fyle4);
-	c2 = close(fyle2);
 	if (c4 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fyle4);
 		exit(100);
 	}
+	c2 = close(fyle2);
 	if (c2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fyle2);
