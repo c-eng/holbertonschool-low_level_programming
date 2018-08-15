@@ -29,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	wry = write(STDIN_FILENO, buff, reed);
+	wry = write(STDOUT_FILENO, buff, reed);
 
 	if (wry != reed)
 	{
