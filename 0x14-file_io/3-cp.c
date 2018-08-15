@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (!arg[2])
+	if (!argv[2])
 	{
 		free(buff);
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
