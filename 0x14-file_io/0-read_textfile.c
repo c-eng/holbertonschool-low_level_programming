@@ -11,7 +11,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fi, reed, wry;
-	char buff[letters];
+	char *buff;
 
 	if (!filename)
 		return (0);
@@ -21,10 +21,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fi == -1)
 		return (0);
 
+	buff = malloc(sizeof(char) * letters);
+
+	if (!buff)
+		return (0);
+
 	reed = read(fi, buff, letters);
 
 	if (reed == -1)
 	{
+		free(buff);
 		close(fi);
 		return (0);
 	}
@@ -33,10 +39,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (wry != reed)
 	{
+		free(buff);
 		close(fi);
 		return (0);
 	}
-
+	free(buff);
 	close(fi);
 	return (wry);
 }
