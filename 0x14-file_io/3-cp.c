@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", argv[1], argv[2]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 		exit(97);
 	}
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 	if (fyle2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	do {
@@ -41,11 +41,17 @@ int main(int argc, char *argv[])
 			wry = write(fyle2, buff, reed);
 			if (wry != reed)
 			{
-				dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 				exit(99);
 			}
 		}
 		reed = read(fyle4, buff, BUFFSIZE);
+		if (reed == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+
 	} while (reed);
 	c4 = close(fyle4);
 	if (c4 == -1)
