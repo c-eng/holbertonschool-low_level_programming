@@ -23,7 +23,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	add->n = n;
 	strider = *h;
 	if (!strider)
+	{
+		free(add);
 		return (add_dnodeint(h, n));
+	}
 	while (strider->next && index < idx)
 	{
 		index += 1;
@@ -42,7 +45,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	if (index == idx - 1)
 	{
-		free (add);
+		free(add);
 		return (add_dnodeint_end(h, n));
 	}
 	return (NULL);
