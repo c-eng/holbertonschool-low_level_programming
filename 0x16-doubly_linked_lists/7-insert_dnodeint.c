@@ -22,6 +22,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	add->n = n;
 	strider = *h;
+	if (!strider)
+		return (add_dnodeint(h, n));
 	while (strider->next && index < idx)
 	{
 		index += 1;
