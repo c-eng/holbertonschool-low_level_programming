@@ -1,7 +1,7 @@
 # 0x17. C - Dynamic libraries
 ### Description
 Learning what a dynamic library is, how it works how to create one and how to
-one.
+use one.
 
 ## Directory Contents
 
