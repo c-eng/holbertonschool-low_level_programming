@@ -10,4 +10,5 @@ Learning about big O notation and different sorting algorithms
 
 ### Authors
 *Erwin Grove* - [Github](https://github.com/Hunt6666) || [Twitter](https://twitter.com/ErwinEhg50)
+
 *Cameron Eng* - [Github](https://github.com/c_eng/) || [Twitter](https://twitter.com/c33Eng)
