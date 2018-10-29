@@ -32,7 +32,7 @@ void quicksort(int *array, size_t size, int *p_array, size_t p_size)
 		}
 		idx += 1;
 	}
-	if (wall != pivot)
+	if (wall != pivot && array[wall] != array[pivot])
 	{
 		temp = array[wall];
 		array[wall] = array[pivot];
