@@ -23,16 +23,16 @@ void selection_sort(int *array, size_t size)
 				array[j] = t;
 				t = temp;
 				array[i] = temp;
-				for (k = 0; k < size; k++)
-				{
-					printf("%d", array[k]);
-					if (k != size - 1)
-						printf(", ");
-					else
-						printf("\n");
-				}
-				array[i] = t;
 			}
 		}
+		for (k = 0; k < size; k++)
+		{
+			printf("%d", array[k]);
+			if (k != size - 1)
+				printf(", ");
+			else
+				printf("\n");
+		}
+		array[i] = t;
 	}
 }
