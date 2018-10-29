@@ -9,7 +9,7 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, k, l;
+	size_t i, j, l;
 	int temp, t;
 
 	for (i = 0; i < size; i++)
@@ -20,9 +20,6 @@ void selection_sort(int *array, size_t size)
 		{
 			if (t > array[j])
 			{
-				/*	temp = array[j];
-				array[j] = t;
-				t = temp;*/
 				t = array[j];
 				l = j;
 			}
@@ -31,14 +28,7 @@ void selection_sort(int *array, size_t size)
 		{
 			array[l] = temp;
 			array[i] = t;
-			for (k = 0; k < size; k++)
-			{
-				printf("%d", array[k]);
-				if (k != size - 1)
-					printf(", ");
-				else
-					printf("\n");
-			}
+			print_array(array, size);
 		}
 	}
 }
