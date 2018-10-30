@@ -60,7 +60,7 @@ void counting_sort(int *array, size_t size)
 	int *count = NULL, *out = NULL;
 	size_t i = 0, max = 0;
 
-	if (!array || !size)
+	if (!array || size < 2)
 		return;
 	for ( ; i < size ; i++)
 	{
