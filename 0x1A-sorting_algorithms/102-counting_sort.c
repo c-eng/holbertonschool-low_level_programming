@@ -11,15 +11,15 @@
 
 void *memeset(void *a, int c, int size)
 {
-        int i;
-        unsigned char *p = a;
+	int i;
+	unsigned char *p = a;
 
-        for (i = 0 ; i < size ; i++)
-        {
-                *p = c;
-                p++;
-        }
-        return (a);
+	for (i = 0 ; i < size ; i++)
+	{
+		*p = c;
+		p++;
+	}
+	return (a);
 }
 
 /**
@@ -32,26 +32,25 @@ void *memeset(void *a, int c, int size)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-        void *areigh;
+	void *areigh;
 
-        if (size && nmemb)
-        {
-                areigh = malloc(nmemb * size);
-                if (areigh)
-                {
-                        memeset(areigh, '\0', nmemb * size);
-                        return (areigh);
-                }
-        }
-        return (NULL);
+	if (size && nmemb)
+	{
+		areigh = malloc(nmemb * size);
+		if (areigh)
+		{
+			memeset(areigh, '\0', nmemb * size);
+			return (areigh);
+		}
+	}
+	return (NULL);
 }
-
 
 /**
  * counting_sort - Counting sort for int array
  *
  * @array: array to sort
- * @size_t: size of array
+ * @size: size of array
  *
  * Return: void
  */
@@ -72,9 +71,9 @@ void counting_sort(int *array, size_t size)
 	out = _calloc(sizeof(int), size);
 	if (!count)
 		return;
-        if (!out)
+	if (!out)
 	{
-                free(count);
+		free(count);
 		return;
 	}
 	for (i = 0 ; i < size ; i++)
