@@ -14,9 +14,9 @@ void shell_sort(int *array, size_t size)
 
 	for (table = size / 2; table > 0; table = table / 2)
 	{
-		for (i = 0; i <= table; i++)
+		for (i = 0; i < table; i++)
 		{
-			for (j = ((size / 2) * 2) - i; j > table; j -= table)
+			for (j = (size / 2) * 2; j > table; j -= table)
 			{
 				if (array[j] < array[j - table])
 				{
