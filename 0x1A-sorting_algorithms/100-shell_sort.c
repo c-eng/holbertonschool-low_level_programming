@@ -3,7 +3,7 @@
 /**
  *shell_sort -sorts an array of ints using shell sort
  *@array: the array to be sorted
- *@sie: size of the array
+ *@size: size of the array
  *Return: void
  */
 
