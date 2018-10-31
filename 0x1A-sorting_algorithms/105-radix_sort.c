@@ -8,7 +8,7 @@
  */
 
 
-int get_bit(int n, unsigned int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i;
 
@@ -31,17 +31,20 @@ int get_bit(int n, unsigned int index)
  *Return: the number of bits in n
  */
 
-int count_bits(int n)
+int count_bits(unsigned int n)
 {
 	int count = 0;
 
 	while (n)
 	{
 		count += n & 1;
-		n >> 1;
+		n = n >> 1;
 	}
 	return count;
 }
+
+/**
+ *
 
 
 /**
@@ -54,13 +57,13 @@ int count_bits(int n)
 void radix_sort(int *array, size_t size)
 {
 	size_t i, k;
-	int biggest = array[0];
+	unsigned int biggest = array[0];
 	int temp;
 	unsigned int j;
 
 	for (i = 0; i < size; i++)
 	{
-		if (biggest < array[i])
+		if ((int) biggest < array[i])
 			biggest = array[i];
 	}
 	biggest = count_bits(biggest);
@@ -69,7 +72,7 @@ void radix_sort(int *array, size_t size)
 		k = 0;
 		for (i = 0; i < size; i++)
 		{
-			if (get_bit(array[i], j) == 0)
+			if (get_bit((unsigned int) array[i], j) == 0)
 			{
 				temp = array[k];
 				array[k] = array[i];

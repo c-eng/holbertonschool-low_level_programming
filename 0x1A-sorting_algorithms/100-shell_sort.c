@@ -12,7 +12,10 @@ void shell_sort(int *array, size_t size)
 	size_t i, table, j;
 	int temp, flag = 0;
 
-	for (table = size / 2; table > 0; table = table / 2)
+	for (table = 1; table < size; table = (table * 3) + 1)
+		;
+
+	for (table = (table - 1) / 3; table > 0; table = (table + 1) / 3)
 	{
 		for (i = table; i < size; i++)
 		{
@@ -24,11 +27,11 @@ void shell_sort(int *array, size_t size)
 				flag = 1;
 			}
 			array[j] = temp;
-			if (flag == 1)
-			{
-				print_array(array, size);
-				flag = 0;
-			}
+		}
+		if (flag == 1)
+		{
+			print_array(array, size);
+			flag = 0;
 		}
 	}
 }
