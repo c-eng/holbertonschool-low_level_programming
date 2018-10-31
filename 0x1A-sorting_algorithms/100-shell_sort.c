@@ -14,18 +14,16 @@ void shell_sort(int *array, size_t size)
 
 	for (table = size / 2; table > 0; table = table / 2)
 	{
-		for (i = 0; i <= table; i++)
+		for (i = table; i < size; i++)
 		{
-			for (j = ((size / 2) * 2) - i; j > table; j -= table)
+			temp = array[i];
+			for (j = i; j >= table && array[j - table] > temp;
+			     j -= table)
 			{
-				if (array[j] < array[j - table])
-				{
-					temp = array[j];
-					array[j] = array[j - table];
-					array[j - table] = temp;
-					flag = 1;
-				}
+				array[j] = array[j - table];
+				flag = 1;
 			}
+			array[j] = temp;
 			if (flag == 1)
 			{
 				print_array(array, size);
