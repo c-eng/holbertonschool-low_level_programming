@@ -1,0 +1,82 @@
+#include "sort.h"
+
+/**
+ *get_bit - gets the bit value at a given index
+ *@n: the int to get value from
+ *@index: the index to get bit value from
+ *Return: the bit value
+ */
+
+
+int get_bit(int n, unsigned int index)
+{
+	unsigned int i;
+
+	if (index > sizeof(n) * 8)
+		return (-1);
+
+	for (i = 0 ; i < index ; i++)
+	{
+		if (n >> 1 == 0)
+			return (0);
+		n = n >> 1;
+	}
+	return (n & 1);
+}
+
+
+/**
+ *count_bits - counts the number of bits in a number
+ *@n: the number to count
+ *Return: the number of bits in n
+ */
+
+int count_bits(int n)
+{
+	int count = 0;
+
+	while (n)
+	{
+		count += n & 1;
+		n >> 1;
+	}
+	return count;
+}
+
+
+/**
+ *radix_sort - sorts an array of ints using radix sort method
+ *@array: the array to be sorted
+ *@size: the size of the array
+ *Return: void
+ */
+
+void radix_sort(int *array, size_t size)
+{
+	size_t i, k;
+	int biggest = array[0];
+	int temp;
+	unsigned int j;
+
+	for (i = 0; i < size; i++)
+	{
+		if (biggest < array[i])
+			biggest = array[i];
+	}
+	biggest = count_bits(biggest);
+	for (j = 0; j < biggest; j++)
+	{
+		k = 0;
+		for (i = 0; i < size; i++)
+		{
+			if (get_bit(array[i], j) == 0)
+			{
+				temp = array[k];
+				array[k] = array[i];
+				array[i] = temp;
+			}
+			k++;
+		}
+		print_array(array, size);
+	}
+}
