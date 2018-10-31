@@ -44,7 +44,43 @@ int count_bits(unsigned int n)
 }
 
 /**
- *
+ *make_array - makes new array for radix sort
+ *@array: the starting array
+ *@size: the size of the array
+ *Return: void
+ */
+
+void make_array(int *array, size_t size, size_t loc)
+{
+	int new_array[sizeof(array)];
+	size_t i, j = 0;
+	int count = 0;
+
+	for (i = 0; i < size; i++)
+	{
+		if (get_bit((unsigned int) array[i], loc) == 0)
+			count++;
+	}
+	for (i = 0; i < size; i++)
+	{
+		if (get_bit((unsigned int) array[i], loc) == 0)
+		{
+			new_array[j] = array[i];
+			j++;
+		}
+		else
+		{
+			new_array[count] = array[i];
+			count++;
+		}
+	}
+	for (i = 0; i < size; i++)
+	{
+		array[i] = new_array[i];
+	}
+	print_array(array, size);
+}
+
 
 
 /**
@@ -56,9 +92,8 @@ int count_bits(unsigned int n)
 
 void radix_sort(int *array, size_t size)
 {
-	size_t i, k;
+	size_t i;
 	unsigned int biggest = array[0];
-	int temp;
 	unsigned int j;
 
 	for (i = 0; i < size; i++)
@@ -67,19 +102,11 @@ void radix_sort(int *array, size_t size)
 			biggest = array[i];
 	}
 	biggest = count_bits(biggest);
-	for (j = 0; j < biggest; j++)
+	for (j = 0; j < (unsigned int) biggest; j++)
 	{
-		k = 0;
-		for (i = 0; i < size; i++)
-		{
-			if (get_bit((unsigned int) array[i], j) == 0)
-			{
-				temp = array[k];
-				array[k] = array[i];
-				array[i] = temp;
-			}
-			k++;
-		}
-		print_array(array, size);
+		printf("%d\n", biggest);
+		printf("befor make array\n");
+		make_array(array, size, j);
+		printf("after make array\n");
 	}
 }
