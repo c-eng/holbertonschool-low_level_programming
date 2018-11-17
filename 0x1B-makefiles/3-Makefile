@@ -1,6 +1,6 @@
 CC = gcc
-SRC := $(wildcard *.c)
-OBJ := $(SRC:.c=.o)
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
 NAME = holberton
 RM = rm -f
 
@@ -11,13 +11,14 @@ clean:
 	${RM} *~ holberton
 
 oclean:
-	${RM} *.o
+	${RM} ${OBJ}
 
 fclean:
-	${RM} *~ holberton *.o
+	${RM} *~ holberton
+	${RM} ${OBJ}
 
 re: ${SRC}
-	${RM} main.o holberton.o
+	${RM} ${OBJ}
 	${CC} -c -o main.o main.c
 	${CC} -c -o holberton.o holberton.c
 	${CC} ${OBJ} -o ${NAME}
