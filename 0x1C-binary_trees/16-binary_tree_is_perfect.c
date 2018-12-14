@@ -48,12 +48,12 @@ size_t binary_tree_height(const binary_tree_t *tree)
  * Return: b^e
  */
 
-int not_pow(int a, int b)
+int not_pow(int b, int e)
 {
 	int out = 1, i = 0;
 
-	for ( ; i < b ; i++)
-		out *= a;
+	for ( ; i < e ; i++)
+		out *= b;
 	return (out);
 }
 
@@ -73,7 +73,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	nodes = binary_tree_nodes(tree);
 	height = binary_tree_height(tree);
-	perfect = not_pow(2, (height + 1)) -1;
+	perfect = not_pow(2, (height + 1)) - 1;
 	if (nodes == perfect)
 		return (1);
 	return (0);
