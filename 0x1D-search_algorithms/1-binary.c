@@ -29,7 +29,11 @@ int binary_search(int *array, size_t size, int value)
 		}
 		printf("\n");
 		if (value == searcher[(size - 1) / 2])
-			return ((int) (size - 1) / 2);
+		{
+			for (i = 0 ; array[i] != value ; i++)
+				;
+			return (i);
+		}
 		else if (size < 2)
 			break;
 		else if (value > searcher[(size - 1) / 2])
