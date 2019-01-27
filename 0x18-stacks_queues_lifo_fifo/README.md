@@ -4,7 +4,7 @@ Introductory data structures: Queues and stacks with Monty.
 
 ## Directory Contents
 
-|   ***File/Folder***    |  **Decription**                       |
+|   ***File/Folder***    |  **Description**                       |
 |---------------|---------------------------------------|
 | `README.md` |  Read me file. |
 
