@@ -1,1 +1,13 @@
-Scripts for project due on 18/06/20.  More to be added later.
+# 0x00. C - Hello, World
+### Description
+Introduction to C.
+
+## Directory Contents
+
+|   ***File/Folder***    |  **Description**                       |
+|---------------|---------------------------------------|
+| `README.md` |  Read me file. |
+| `` |  |
+
+### Authors
+*Cameron Eng* - [Github](https://github.com/c_eng/) || [Twitter](https://twitter.com/c33Eng)
