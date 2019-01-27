@@ -1,1 +1,13 @@
-Tasks for project due on 18/06/21.  More to be added later.
+# 0x01. C - Variables, if, else, while
+### Description
+Introduction to C.
+
+## Directory Contents
+
+|   ***File/Folder***    |  **Description**                       |
+|---------------|---------------------------------------|
+| `README.md` |  Read me file. |
+| `` |  |
+
+### Authors
+*Cameron Eng* - [Github](https://github.com/c_eng/) || [Twitter](https://twitter.com/c33Eng)
