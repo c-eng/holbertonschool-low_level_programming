@@ -5,9 +5,12 @@ use one.
 
 ## Directory Contents
 
-|   ***File/Folder***    |  **Decription**                       |
+|   ***File/Folder***    |  **Description**                       |
 |---------------|---------------------------------------|
 | `README.md` |  Read me file. |
+| `holberton.h` |  |
+| `1-create_dynamic_lib.sh` |  |
+| `libholberton.so` |  |
 
 ### Authors
 *Cameron Eng* - [Github](https://github.com/c_eng/) || [Twitter](https://twitter.com/c33Eng)
