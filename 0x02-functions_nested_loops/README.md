@@ -6,6 +6,7 @@ Introduction to writing functions and using nested loops.
 
 |   ***File/Folder***    |  **Description**                       |
 |---------------|---------------------------------------|
+| `holberton.h` | Header file. |
 | `README.md` |  Read me file. |
 | `0-holberton.c` | Print Holberton. |
 | `1-alphabet.c` | Print lowercase alphabet. |
