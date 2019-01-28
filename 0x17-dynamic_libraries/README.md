@@ -8,9 +8,9 @@ use one.
 |   ***File/Folder***    |  **Description**                       |
 |---------------|---------------------------------------|
 | `README.md` |  Read me file. |
-| `holberton.h` |  |
-| `1-create_dynamic_lib.sh` |  |
-| `libholberton.so` |  |
+| `holberton.h` | Header file for tasks. |
+| `1-create_dynamic_lib.sh` | Create dynamic library from all .c files in current directory. |
+| `libholberton.so` | Dynamic library containing specified functions. |
 
 ### Authors
 *Cameron Eng* - [Github](https://github.com/c_eng/) || [Twitter](https://twitter.com/c33Eng)
