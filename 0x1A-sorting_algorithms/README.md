@@ -7,22 +7,22 @@ Learning about big O notation and different sorting algorithms
 |   ***File/Folder***    |  **Decription**                       |
 |---------------|---------------------------------------|
 | `README.md` |  Read me file. |
-| `sort.h` |  |
-| `0-bubble_sort.c` |  |
-| `0-O` |  |
-| `1-insertion_sort_list.c` |  |
-| `1-O` |  |
-| `2-selection_sort.c` |  |
-| `2-O` |  |
-| `3-quick_sort.c` |  |
-| `3-O` |  |
-| `100-shell_sort.c` |  |
-| `101-cocktail_sort_list.c` |  |
-| `101-O` |  |
-| `102-counting_sort.c` |  |
-| `102-O` |  |
-| `105-radix_sort.c` |  |
-| `105-O` |  |
+| `sort.h` | Header file for tasks. |
+| `0-bubble_sort.c` | Implementation of bubble sort. |
+| `0-O` | Time complexity of bubble sort. |
+| `1-insertion_sort_list.c` | Implementation of insertion sort. |
+| `1-O` | Time complexity of insert sort. |
+| `2-selection_sort.c` | Implementation of selection sort. |
+| `2-O` | Time complexity of selection sort. |
+| `3-quick_sort.c` | Implementation of quick sort. |
+| `3-O` | Time complexity of quick sort. |
+| `100-shell_sort.c` | Implementation of shell sort. |
+| `101-cocktail_sort_list.c` | Implementation of cocktail sort. |
+| `101-O` | Time complexirt of cocktail sort. |
+| `102-counting_sort.c` | Implementation of counting sort. |
+| `102-O` | Time complexity of counting sort. |
+| `105-radix_sort.c` | Implementation of radix sort. |
+| `105-O` | Time complexity of radix sort. |
 
 ### Authors
 *Erwin Grove* - [Github](https://github.com/Hunt6666) || [Twitter](https://twitter.com/ErwinEhg50)
