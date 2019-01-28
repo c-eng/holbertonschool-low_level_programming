@@ -7,13 +7,13 @@ Introduction to argc and argv.
 |   ***File/Folder***    |  **Description**                       |
 |---------------|---------------------------------------|
 | `README.md` |  Read me file. |
-| `holberton.h` |  |
-| `0-whatsmyname.c` |  |
-| `1-args.c` |  |
-| `2-args.c` |  |
-| `3-mul.c` |  |
-| `4-add.c` |  |
-| `100-change.c` |  |
+| `holberton.h` | Header file for tasks. |
+| `0-whatsmyname.c` | Print program name. |
+| `1-args.c` | Print number of arguments passed. |
+| `2-args.c` | Print all arguments received. |
+| `3-mul.c` | Multiply two numbers. |
+| `4-add.c` | Add positive numbers. |
+| `100-change.c` | Determine minumum number of coins to make change for a specified amount. |
 
 ### Authors
 *Cameron Eng* - [Github](https://github.com/c_eng/) || [Twitter](https://twitter.com/c33Eng)
