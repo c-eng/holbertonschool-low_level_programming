@@ -7,14 +7,14 @@ Introduction to C.
 |   ***File/Folder***    |  **Description**                       |
 |---------------|---------------------------------------|
 | `README.md` |  Read me file. |
-| `0-preprocessor` |  |
-| `1-compiler` |  |
-| `2-assembler` |  |
-| `3-name` |  |
-| `4-puts.c` |  |
-| `5-printf.c` |  |
-| `6-size.c` |  |
-| `100-intel` |  |
+| `0-preprocessor` | Save preprocessor result to a specific file. |
+| `1-compiler` | Compile but do not link a file. Result should be a .o file. |
+| `2-assembler` | Generate assembly code.  Result shouldbe a .s file. |
+| `3-name` | Compile to an executable named cisfun |
+| `4-puts.c` | Print `"Programming is like building a multilingual puzzle`. |
+| `5-printf.c` | Print `with proper grammar, but the outcome is a piece of art,`. |
+| `6-size.c` | Print size of various types. |
+| `100-intel` | Generate Intel syntax assembly code. |
 
 ### Authors
 *Cameron Eng* - [Github](https://github.com/c_eng/) || [Twitter](https://twitter.com/c33Eng)
